@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Intelligent Environment AngularJS Reference App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <!-- Styles -->
+  <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+  <link type="text/css" rel="stylesheet" href="bower_components/iids/dist/iidx/css/iids.min.css"/>
+  <link type="text/css" rel="stylesheet" href="bower_components/iids/dist/iidx/css/responsive.min.css"/>
+
+
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body class="app">
+  <div class="bodyDiv">
+    <div class="headerDiv navbar navbar-default navbar-static-top templatecontainer">
+
+      <div class="container">
+
+          <div class="masthead navbar-header">
+              <a class="navbar-brand" href="#" data-ng-cloak="">
+                  <span class="ge-logo"></span>
+                  <span>Intelligent Environment AngularJS Reference App
+                  </span>
+              </a>
+          </div>
+          <div class="notifications pull-right">
+              <div class="btn-toolbar">
+                  <div class="btn-group">
+                      <!-- Signout link for authentication - Adds implicit grant oauth -->
+                      <px-oauth
+                          site="site"
+                          client-id="clientId"
+                          redirect-uri="redirectUri">
+                      </px-oauth>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="primary-navbar navbar-collapse">
+          <div class="container">
+            <ul class="nav navbar-nav" data-ng-cloak="">
+              <li class="active"><a href="#!/ie_details">IE Service Details</a></li>
+              <li><a href="" class="disabled" disabled="disabled">Coming Soon...</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="content container mainContentDiv" ng-view></div>
+
+    <div class="footer container" >
+      <footer class="flex flex--middle" role="contentinfo">
+          <div class="viewport">
+              <nav class="flex flex--right flex--middle" role="navigation">
+                  <ul class="list-inline" style="position:absolute">
+                      <li class="u-mh-">
+                          <a href="http://www.ge.com/privacy" target="_blank">Privacy</a>
+                      </li>
+                      <li class="u-mh-">
+                          <a href="http://www.ge.com/terms" target="_blank">Terms</a>
+                      </li>
+                  </ul>
+                  <small class="u-ml+ pull-right">©2015 General Electric</small>
+              </nav>
+          </div>
+      </footer>
+    </div>
+  </div>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/moment/min/moment.min.js"></script>
+  <script src="app.js"></script>
+  <script src="ie_details/ie_route.js"></script>
+  <script src="ie_details/ie_controller.js"></script>
+  <script src="ie_details/ie_service.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

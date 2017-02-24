@@ -1,0 +1,92 @@
+<p>Welcome {{welcomeText}} !</p>
+
+<div class="container-fluid" style="padding-left: 0px;">
+  <div class="row equal">
+    <!--begin panel 1 -->
+    <div class="col-md-6">
+      <div style="text-align:center" class="panel panel-primary">
+        <div class="panel-heading">
+          <h1 class="panel-title text-center">Traffic Planning</h1>
+        </div>
+        <!-- end panel-heading -->
+        <div class="panel-body">
+          <p class="text-left lead2">Below information is received from Intelligent Environment's Traffic API Service call.</p>
+          <ul class="text-left">
+            <li><span class="labelClass">Speed:</span> {{trafficData.speed}}</li>
+            <li><span class="labelClass">Direction:</span>  {{trafficData.direction}}</li>
+            <li><span class="labelClass">Count: </span> {{trafficData.count}}</li>
+          </ul> <a class="btn btn-primary" >More Info <span class="fontComingSoon">(coming soon...)</span> »</a>
+
+        </div>
+        <!-- end panel-body -->
+      </div>
+      <!-- end panel-primary -->
+    </div>
+    <!--end col-md-4 -->
+    <!-- begin panel 2 -->
+    <div class="col-md-6">
+      <div style="text-align:center" class="panel panel-primary">
+        <div class="panel-heading">
+          <h1 class="panel-title">Parking Planning</h1>
+        </div>
+        <!-- end panel-heading -->
+        <div class="panel-body">
+          <p class="text-left lead2">Below information is received from Intelligent Environment's Parking API Service call.</p>
+          <ul class="text-left">
+            <li><span class="labelClass">Pixel Coordinates:</span> {{parkingData.pixelCoordinates}}</li>
+            <li><span class="labelClass">Time:</span> {{parkingData.time}}</li>
+            <li><span class="labelClass">Location:</span> {{parkingData.location}}</li>
+          </ul> <a class="btn btn-primary" >More Info <span class="fontComingSoon">(coming soon...)</span> »</a>
+        </div>
+        <!-- end panel-body -->
+      </div>
+      <!-- end panel-primary -->
+    </div>
+    <!-- end col-md-4 -->
+
+  </div>
+  <!-- end row -->
+
+  <div class="row equal">
+    <!--begin panel 1 -->
+    <div class="col-md-6">
+      <div style="text-align:center" class="panel panel-primary">
+        <div class="panel-heading">
+          <h1 class="panel-title text-center">Pedestrian Planning</h1>
+        </div>
+        <!-- end panel-heading -->
+        <div class="panel-body">
+          <p class="text-left lead2">Below information is received from Intelligent Environment's Pedestrian API Service call.</p>
+          <ul class="text-left">
+            <li><span class="labelClass">Count:</span> {{pedestrianData.count}}</li>
+            <li><span class="labelClass">Time:</span> {{pedestrianData.time}}</li>
+            <li><span class="labelClass">Location:</span> {{pedestrianData.location}}</li>
+          </ul> <a class="btn btn-primary" style="margin-top: 32px;" >More Info <span class="fontComingSoon">(coming soon...)</span> »</a>
+        </div>
+        <!-- end panel-body -->
+      </div>
+      <!-- end panel-primary -->
+    </div>
+    <!--end col-md-4 -->
+    <!-- begin panel 2 -->
+    <div class="col-md-6">
+      <div style="text-align:center" class="panel panel-primary">
+        <div class="panel-heading">
+          <h1 class="panel-title">Public Safety</h1>
+        </div>
+        <!-- end panel-heading -->
+        <div class="panel-body">
+          <p class="text-left lead2">Below information is received from Intelligent Environment's Public Safety API Service call.</p>
+          <ul class="text-left" style="list-style-type: none; position: relative; left: 25%;">
+            <li><img id="idImg2" ng-src="{{publicSafetyData.imageToDisplay}}" style="width:195px;height:95px;"></li>
+          </ul> <a class="btn btn-primary" >More Info <span class="fontComingSoon">(coming soon...)</span> »</a>
+        </div>
+        <!-- end panel-body -->
+      </div>
+      <!-- end panel-primary -->
+    </div>
+    <!-- end col-md-4 -->
+
+  </div>
+  <!-- end row -->
+</div>

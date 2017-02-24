@@ -1,0 +1,190 @@
+/* app css stylesheet */
+body {
+  /*min-height: 800px;*/
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.footer {
+  margin-left: 100px;
+  border-top: 1px solid #414141;
+  position:static;;
+  bottom:0;
+  /*width:100%;*/
+  height:60px;   /* Height of the footer */
+  left: 50%;
+  right: 50%
+}
+.headerDiv {
+
+}
+.mainContentDiv {
+  padding:10px;
+  padding-bottom:80px;   /* Height of the footer */
+}
+.bodyDiv {
+  min-height:100%;
+  position:relative;
+}
+.nav>li>a.disabled:hover {
+  color: #868686;
+  cursor: default;
+}
+.labelClass {
+  color: #7c7c84;
+}
+.fontComingSoon {
+  font-size: 10px;
+  font-style: italic;
+  opacity: 0.6;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+/*
+
+Where did these come from? CDX new stuff?
+
+@btnBorderForRealzy:                @grayLightest;
+
+@btnPrimaryText:                    @white;
+
+@btnPrimaryToggle:                  darken(@blue,50%);
+@btnIconColorPrimary:               @white;
+
+@btnInverseText:                    @btnPrimaryText;
+@btnInverseBackground:              @btnPrimaryBackground;
+@btnInverseBackgroundHighlight:     @btnPrimaryBackgroundHighlight;
+@btnInverseIconColor:               @btnIconColorPrimary;
+
+
+// toggle
+
+@btnToggleText:                     @white;
+@btnToggleBackground:               @blue;
+
+
+// faceted / type ahead
+@dropdownFacetedFacetBackground: @grayLightest;sx
+
+
+
+//Declarative-visualizations
+//gradient colors for each severity type
+//-----------------------------------------
+@blue1:           #1483B2;
+@blue2:           #25AAE1;
+@yellow1:         #D8BB27;
+@yellow2:         #FBDA06;
+@orange1:         #D07931;
+@orange2:         #F58624;
+@red1:            #C62F27;
+@red2:            #EE3D2C;
+@BarLightsOnGray: #e7e6e7;
+@meterBgGray:     #e7e5e7;
+
+
+// Datagrids
+//-------------
+
+//@dataTableRowEvenBgrnd:   #749BCD;
+//@dataTableRowHover:       #B7CBE5;
+//@dataGridbackgroundColor: #EEEEEE;
+*/
+.module {
+  min-height: 290px;
+}
+/** Needed because Angular is not loaded in the head of the document **/
+[data-ng-cloak],
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+.horizon1 {
+  height: 20px;
+}
+.chart {
+  position: relative;
+  width: 80%;
+}
+.axis {
+  font: 10px sans-serif;
+  pointer-events: none;
+  z-index: 2;
+}
+.axis text {
+  -webkit-transition: fill-opacity 250ms linear;
+}
+.axis path {
+  display: none;
+}
+.axis line {
+  stroke: #666;
+  shape-rendering: crispEdges;
+}
+.axis.top {
+  top: 0px;
+  padding: 0 0 10px 0;
+}
+.axis.bottom {
+  bottom: 0px;
+  padding: 10px 0 0 0;
+}
+.horizon {
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #FFF;
+}
+.horizon canvas {
+  display: block;
+}
+.horizon .title,
+.horizon .value {
+  bottom: 0;
+  font-size: 0.8em;
+  line-height: 20px;
+  margin: 0 6px;
+  position: absolute;
+  white-space: nowrap;
+}
+.horizon .title {
+  left: 0;
+}
+.horizon .value {
+  display: none;
+  right: 0;
+}
+.line {
+  background: #666;
+  z-index: 2;
+}
